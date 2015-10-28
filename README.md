@@ -1,8 +1,20 @@
 # RSbots
 why play runescape when you can just write bots?
 
-Create a new run configuration.
-Add org.powerbot.Boot as main class.
-Add -Xss6m -Xmx2048m -XX:MaxPermSize=512m -XX:+CMSClassUnloadingEnabled -XX:+UseCodeCacheFlushing -XX:-UseSplitVerifier -XX:+UseConcMarkSweepGC
+Create a new run configuration in eclipse.
+Download rsbot and the runescape client.
+Find jagexappletviewer.jar in the runescape client folder.
+
+Add jagexappletviewer as main class.
+Add -Djava.search.path=C:/Users/Mark/workspace/rsscripts/bin
+-Dsun.java2d.nodraw=true
+-Dcom.jagex.config=http://oldschool.runescape.com/l=en/jav_config.ws
+-Xmx512m
+-Xss2m
+-XX:CompileThreshold=1500
+-Xincgc
+-XX:+UseConcMarkSweepGC
+-XX:+UseParNewGC
+-javaagent:C:\Users\Mark\Dev\RSScript\RSBot-7011.jar [path to rsbot jar]
   as vm arguments
-Add -debug as program args
+Add runescape as program args
